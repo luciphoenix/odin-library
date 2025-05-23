@@ -40,7 +40,7 @@ function createBookCard(book) {
   book_title = document.createElement("p");
   book_author = document.createElement("p");
   book_pages = document.createElement("p");
-  book_read = document.createElement("p");
+  book_read = document.createElement("button");
   book_info = document.createElement("div");
 
   card.setAttribute("class", "card");
