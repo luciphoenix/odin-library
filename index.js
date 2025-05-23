@@ -15,6 +15,20 @@ const library = [
     read: "read",
     title: "what life took form me",
   },
+  {
+    id: crypto.randomUUID(),
+    author: "Elvis",
+    pages: "6",
+    read: "read",
+    title: "what life took form me",
+  },
+  {
+    id: crypto.randomUUID(),
+    author: "Elvis",
+    pages: "6",
+    read: "read",
+    title: "what life took form me",
+  },
 ];
 
 function Book(title, author, pages, read = false) {
