@@ -41,6 +41,7 @@ function createBookCard(book) {
   book_author = document.createElement("p");
   book_pages = document.createElement("p");
   book_read = document.createElement("p");
+  book_info = document.createElement("div");
 
   card.setAttribute("class", "card");
   book_title.textContent = `Title: ${book.title}`;
@@ -49,13 +50,16 @@ function createBookCard(book) {
   book_read.textContent = `${book.read}`;
   image.setAttribute("src", "./image.png");
 
+  book_read.classList.add("read");
+  book_info.classList.add("book_info");
+
   console.log(book_title);
   card.appendChild(image);
-  card.appendChild(book_title);
-  card.appendChild(book_author);
-  card.appendChild(book_pages);
-  card.appendChild(book_read);
-
+  book_info.appendChild(book_title);
+  book_info.appendChild(book_author);
+  book_info.appendChild(book_pages);
+  book_info.appendChild(book_read);
+  card.appendChild(book_info);
   cards.appendChild(card);
 }
 

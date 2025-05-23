@@ -16,7 +16,7 @@ body {
   max-width: 70%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   grid-template-rows: 6rem 1fr;
   grid-template-areas:
     "header header"
@@ -34,4 +34,18 @@ form {
 header {
   grid-area: header;
   background-color: rgba(240, 226, 34, 0.74);
+}
+
+label {
+  display: block;
+}
+
+.read {
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: min-content;
+}
+.book_info {
+  padding: 0.5rem;
 }
