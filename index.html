@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="./index.js"></script>
-</head>
-<body>
-    <h1>My Library</h1>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <header><h1>My Library</h1></header>
+
+    <div class="cards"></div>
+    <form action="#">
+      <h2>Provide Book Information</h2>
+      <label for="title">Book title</label>
+      <input type="text" name="title" id="title" />
+      <label for="author">Book author</label>
+      <input type="text" name="author" id="author" />
+      <label for="pages">Book pages</label>
+      <input type="text" name="pages" id="pages" />
+      <label for="read">Book read</label>
+      <input type="text" name="read" id="read" />
+    </form>
+  </body>
 </html>

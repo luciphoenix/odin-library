@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  max-width: 15rem;
+  border: 1px solid;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  max-width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 6rem 1fr;
+  grid-template-areas:
+    "header header"
+    "cards form";
+}
+.cards {
+  display: flex;
+  gap: 2rem;
+  grid-area: cards;
+}
+
+form {
+  grid-area: form;
+}
+header {
+  grid-area: header;
+  background-color: rgba(240, 226, 34, 0.74);
+}
