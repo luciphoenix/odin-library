@@ -17,11 +17,14 @@ body {
   max-width: 70%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 1fr 18rem;
   grid-template-rows: 6rem 1fr;
   grid-template-areas:
     "header header"
     "cards form";
+
+  gap: 10px;
+  padding-bottom: 1rem;
 }
 .cards {
   display: flex;
@@ -79,4 +82,13 @@ select {
   border-radius: 5px;
   background-color: #e9d901;
   margin-top: 15px;
+}
+
+fieldset {
+  border: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }

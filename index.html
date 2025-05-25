@@ -28,12 +28,18 @@
     <div class="cards"></div>
     <form action="#">
       <h2>Provide Book Information</h2>
-      <label for="title">Book title</label>
-      <input type="text" name="title" id="title" required />
-      <label for="author">Book author</label>
-      <input type="text" name="author" id="author" required />
-      <label for="pages">Book pages</label>
-      <input type="text" name="pages" id="pages" required />
+      <div>
+        <label for="title">Book title</label>
+        <input type="text" name="title" id="title" required />
+      </div>
+      <div>
+        <label for="author">Book author</label>
+        <input type="text" name="author" id="author" required />
+      </div>
+      <div>
+        <label for="pages">Book pages</label>
+        <input type="text" name="pages" id="pages" required />
+      </div>
       <fieldset>
         <legend>Have you read the book?</legend>
         <label for="yes"
@@ -45,7 +51,7 @@
           No</label
         >
       </fieldset>
-      <button class="submit">Add Book</button>
+      <div><button class="submit">Add Book</button></div>
     </form>
   </body>
 </html>
