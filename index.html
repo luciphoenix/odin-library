@@ -8,19 +8,44 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <header><h1>My Library</h1></header>
+    <header>
+      <h1>Phoenix Library</h1>
+      <div>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="search..."
+        />
+        <select name="filter" id="filter">
+          <option value="">Filter</option>
+          <option value="author">Author</option>
+          <option value="title">Title</option>
+        </select>
+      </div>
+    </header>
 
     <div class="cards"></div>
     <form action="#">
       <h2>Provide Book Information</h2>
       <label for="title">Book title</label>
-      <input type="text" name="title" id="title" />
+      <input type="text" name="title" id="title" required />
       <label for="author">Book author</label>
-      <input type="text" name="author" id="author" />
+      <input type="text" name="author" id="author" required />
       <label for="pages">Book pages</label>
-      <input type="text" name="pages" id="pages" />
-      <label for="read">Book read</label>
-      <input type="text" name="read" id="read" />
+      <input type="text" name="pages" id="pages" required />
+      <fieldset>
+        <legend>Have you read the book?</legend>
+        <label for="yes"
+          ><input type="radio" name="read" id="yes" value="yes" required />
+          Yes</label
+        >
+        <label for="no"
+          ><input type="radio" name="read" id="no" value="no" required />
+          No</label
+        >
+      </fieldset>
+      <button class="submit">Add Book</button>
     </form>
   </body>
 </html>
