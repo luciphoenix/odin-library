@@ -1,4 +1,5 @@
 const cards = document.querySelector(".cards");
+const addBook = document.querySelector(".submit");
 
 const library = [
   {
@@ -31,12 +32,12 @@ const library = [
   },
 ];
 
-function Book(title, author, pages, read = false) {
+function Book(title, author, pages, read = "no") {
   this.id = crypto.randomUUID();
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.read = read ? "Read" : "Not yet read";
+  this.read = read == "yes" ? "Read" : "Not yet read";
 
   this.info = function () {
     console.log(`${title} by ${author} has ${pages} pages - ${this.read}`);
@@ -75,6 +76,33 @@ function createBookCard(book) {
   book_info.appendChild(book_read);
   card.appendChild(book_info);
   cards.appendChild(card);
+}
+
+addBook.addEventListener("click", CreateNewBook);
+
+function CreateNewBook(e) {
+  e.preventDefault();
+  const bookReadInput = document.querySelector("[name= read]:checked");
+  const bookTitleInput = document.querySelector("[name = title]");
+  const bookAuthorInput = document.querySelector("[name=author");
+  const bookPagesInput = document.querySelector("[name=pages]");
+
+  author = bookAuthorInput.value;
+  title = bookTitleInput.value;
+  read = bookReadInput.value;
+  pages = bookPagesInput.value;
+
+  addBookToLibrary(title, author, pages, read);
+
+  // restore values to default
+  bookAuthorInput.value = "";
+  bookTitleInput.value = "";
+  bookReadInput.checked = false;
+  bookPagesInput.value = "";
+
+  cards.textContent = "";
+
+  library.forEach(createBookCard);
 }
 
 library.forEach(createBookCard);
