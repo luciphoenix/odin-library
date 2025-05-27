@@ -14,7 +14,7 @@ img {
 }
 
 body {
-  max-width: 70%;
+  width: min(100%, 950px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 18rem;

@@ -39,9 +39,9 @@ function Book(title, author, pages, read = "no") {
   this.pages = pages;
   this.read = read == "yes" ? "Read" : "Not yet read";
 
-  this.info = function () {
-    console.log(`${title} by ${author} has ${pages} pages - ${this.read}`);
-  };
+  // this.info = function () {
+  //   console.log(`${title} by ${author} has ${pages} pages - ${this.read}`);
+  // };
 }
 
 const addBookToLibrary = (title, author, pages, read) => {
@@ -68,7 +68,7 @@ function createBookCard(book) {
   book_read.classList.add("read");
   book_info.classList.add("book_info");
 
-  console.log(book_title);
+  // console.log(book_title);
   card.appendChild(image);
   book_info.appendChild(book_title);
   book_info.appendChild(book_author);
@@ -91,7 +91,7 @@ function CreateNewBook(e) {
   title = bookTitleInput.value;
   read = bookReadInput.value;
   pages = bookPagesInput.value;
-
+  // console.log(author);
   addBookToLibrary(title, author, pages, read);
 
   // restore values to default
@@ -101,6 +101,7 @@ function CreateNewBook(e) {
   bookPagesInput.value = "";
 
   cards.textContent = "";
+  // console.log(library);
 
   library.forEach(createBookCard);
 }
